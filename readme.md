@@ -101,7 +101,7 @@ If PostgreSQL is not already installed on your machine, you can install it by fo
 Below are the API endpoints for the TODO App:
 
 ### 1. **Create a New Task**
-   - **Endpoint:** `POST /tasks`
+   - **Endpoint:** `POST /create/`
    - **Description:** Adds a new task to the TODO list.
    - **Request Body:**
      ```json
@@ -121,7 +121,7 @@ Below are the API endpoints for the TODO App:
      ```
    - **Postman Test:**
      - In Postman, select **POST** as the HTTP method.
-     - Enter the URL: `http://localhost:5000/tasks`
+     - Enter the URL: `http://localhost:8000/create/`
      - In the **Body** section, select **raw** and **JSON** format, then enter the request body.
      - Click **Send** to create a new task.
     
@@ -151,11 +151,11 @@ Below are the API endpoints for the TODO App:
      ```
    - **Postman Test:**
      - In Postman, select **GET** as the HTTP method.
-     - Enter the URL: `http://localhost:5000/tasks`
+     - Enter the URL: `http://localhost:8000/`
      - Click **Send** to fetch all tasks.
 
 ### 3. **Get a Specific Task**
-   - **Endpoint:** `GET /viewtask/{id}`
+   - **Endpoint:** `GET /viewtask/{id}/`
    - **Description:** Retrieves a specific task by its ID.
    - **Request URL:** Replace `{id}` with the task ID (e.g., `1`).
    - **Response:**
@@ -169,11 +169,11 @@ Below are the API endpoints for the TODO App:
      ```
    - **Postman Test:**
      - In Postman, select **GET** as the HTTP method.
-     - Enter the URL: `http://localhost:5000/viewtask/1`
+     - Enter the URL: `http://localhost:8000/viewtask/1/`
      - Click **Send** to fetch the task with ID `1`.
  
 ### 4. **Update a Task**
-   - **Endpoint:** `PUT /tasks/{id}/`
+   - **Endpoint:** `PUT /update/{id}/`
    - **Description:** Updates a specific task by its ID.
    - **Request URL:** Replace `{id}` with the task ID (e.g., `1`).
    - **Request Body:**
@@ -194,7 +194,7 @@ Below are the API endpoints for the TODO App:
      ```
    - **Postman Test:**
      - In Postman, select **PUT** as the HTTP method.
-     - Enter the URL: `http://localhost:5000/update/1`
+     - Enter the URL: `http://localhost:8000/update/1/`
      - In the **Body** section, select **raw** and **JSON** format, then enter the request body.
      - Click **Send** to update the task.
     
@@ -212,7 +212,7 @@ Below are the API endpoints for the TODO App:
      ```
    - **Postman Test:**
      - In Postman, select **DELETE** as the HTTP method.
-     - Enter the URL: `http://localhost:5000/delete/1`
+     - Enter the URL: `http://localhost:8000/delete/1`
      - Click **Send** to delete the task with ID `1`.
 
 ![Delete Example](./media/delete.png)
@@ -228,7 +228,7 @@ Below are the API endpoints for the TODO App:
 
 ## Conclusion
 
-By following the steps above, you can easily test the TODO App API endpoints using Postman. Ensure that your app is running locally, and the endpoints are accessible via `http://localhost:5000/`.
+By following the steps above, you can easily test the TODO App API endpoints using Postman. Ensure that your app is running locally, and the endpoints are accessible via `http://localhost:8000/`.
 
 
 ## Contributing
