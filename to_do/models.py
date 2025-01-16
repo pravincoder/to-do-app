@@ -8,4 +8,4 @@ class Task(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title, self.completed, self.created_at
+        return self.title

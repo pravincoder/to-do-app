@@ -11,3 +11,4 @@ class TaskAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
     list_editable = ('completed',)
+    
