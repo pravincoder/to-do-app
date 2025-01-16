@@ -59,3 +59,10 @@ def delete_task(request, task_id):
         task = get_object_or_404(Task, task_id=task_id)
         task.delete()
         return JsonResponse({"message": "Task deleted successfully"})
+
+
+@csrf_exempt
+def delete_all_tasks(request):
+    if request.method == "DELETE":
+        Task.objects.all().delete()
+        return JsonResponse({"message": "All tasks deleted successfully"})

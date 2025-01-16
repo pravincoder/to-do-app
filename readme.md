@@ -147,12 +147,13 @@ Below are the API endpoints for the TODO App:
        }
      ]
 
-![task_list](./media/list_task.png)
      ```
    - **Postman Test:**
      - In Postman, select **GET** as the HTTP method.
      - Enter the URL: `http://localhost:8000/`
      - Click **Send** to fetch all tasks.
+
+![task_list](./media/list_task.png)
 
 ### 3. **Get a Specific Task**
    - **Endpoint:** `GET /viewtask/{id}/`
@@ -171,6 +172,8 @@ Below are the API endpoints for the TODO App:
      - In Postman, select **GET** as the HTTP method.
      - Enter the URL: `http://localhost:8000/viewtask/1/`
      - Click **Send** to fetch the task with ID `1`.
+
+![viewtask](./media/viewtask.png)
  
 ### 4. **Update a Task**
    - **Endpoint:** `PUT /update/{id}/`
@@ -216,6 +219,23 @@ Below are the API endpoints for the TODO App:
      - Click **Send** to delete the task with ID `1`.
 
 ![Delete Example](./media/delete.png)
+
+6. **Delete All Task**
+  - **Endpoint:** `DELETE  deleteall/`
+   - **Description:** Deletes a specific task by its ID.
+   - **Request URL:** Replace `{id}` with the task ID (e.g., `1`).
+   - **Response:**
+     ```json
+     {
+       "message": "Task deleted successfully"
+     }
+     ```
+   - **Postman Test:**
+     - In Postman, select **DELETE** as the HTTP method.
+     - Enter the URL: `http://localhost:8000/deleteall/`
+     - Click **Send** to delete the task with ID `1`.
+
+![Delete Example](./media/deleteall.png)
 
 ## Testing Steps in Postman
 
